@@ -1,5 +1,5 @@
 
-const Fetchdata = async (url:String | any) => {
+const etchdata = async (url:String | any) => {
     const res = await fetch(url,{ cache: 'force-cache' })
     if(!res.ok){
         console.log('oops something went wrong')
@@ -7,4 +7,4 @@ const Fetchdata = async (url:String | any) => {
      return res.json()
 }
  
-export default Fetchdata;
+export default etchdata;

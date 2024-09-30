@@ -6,7 +6,7 @@ import { toast } from "sonner";
 export  const postFun = (info:any,userId:String)=>{
     if(!userId){
        toast.error("Please Sign in First",{
-        description: "Eish Sign in we will waiting for you",
+        description: "Eish Please Sign in we will wait for you",
         action: {
           label: "Undo",
           onClick: () => console.log("Undo"),

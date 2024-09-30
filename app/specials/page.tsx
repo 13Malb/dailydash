@@ -1,6 +1,5 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { fetchData } from "../actions";
-import Fetchdata from "../actions/Fetchdata";
 import Discountmain from "@/components/Discountmain";
 
 

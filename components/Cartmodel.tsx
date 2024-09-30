@@ -225,7 +225,7 @@ const Cartmodel =  ({Data, userName,invent, address,userId}:any) => {
                  </div>
               
               <div className="w-full  p-1 text-white rounded-lg m-1 bg-yellow-700">
-                <span className=" brightness-150">When your products status changes from <strong className="text-red-700">PROCESSING TO CONFIRMED</strong> it  means we have received yor Order and we getting it ready for delivery!!!</span>
+                <span className=" brightness-150">When your products status changes from <strong className="text-red-700">PROCESSING TO CONFIRMED</strong> it  means we have received your Order and we getting it ready for delivery!!!</span>
               </div>
                  <div className="bg-black   w-full gap-1 h-28 shadow flex flex-col items-center justify-center p-1">
             <span className="text-sm">Total:<strong className="text-white"> R{totalPrice()}</strong></span>
