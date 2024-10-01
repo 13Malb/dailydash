@@ -1,7 +1,6 @@
 import { currentUser } from "@clerk/nextjs/server";
-import axios from "axios";
-import Fetchdata from "@/app/actions/Fetchdata";
-import { postData } from "@/app/actions";
+
+import { postData, fetchData } from "@/app/actions";
 
 
 export const checkUser = async ()=>{
@@ -12,7 +11,7 @@ export const checkUser = async ()=>{
         return null
     }
 
-    const loggedInUser = await Fetchdata(`http://localhost:4000/v1/users/${user.id}`)
+    const loggedInUser = await fetchData(`http://localhost:4000/v1/users/${user.id}`)
 
     if(loggedInUser){
         return loggedInUser
