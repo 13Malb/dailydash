@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import { postFun } from "@/app/clientActions";
+import { Suspense } from "react";
+import { SkeletonCard } from "./SkeletonCard";
 
 
 
@@ -19,6 +21,7 @@ const Cardproduct =  ({data,userId}:any, ) => {
       
       <section className=" p-1 grid grid-cols-2 sm:flex sm:justify-center flex-wrap  gap-1">
        {data.map((item:any)=>(
+        <Suspense key={item.id} fallback={<SkeletonCard/>}>
         <Card key={item.id} className="w-[170px] h-52 overflow-hidden border border-green-600 relative  sm:w-72 sm:h-80 m-1 mt-0">
         <div className="left-0 z-50 top-0 p-1 w-min-16 max-w-28 h-8 absolute bg-black opacity-90 rounded-lg">
           <span className="bg-green-700  rounded-md text-center text-sm font-black p-1">{item.qty}</span>
@@ -51,7 +54,7 @@ alt="Picture of the author"
 </div>
 </div>
 </Card>
-
+</Suspense>
        ))}
         
       </section>

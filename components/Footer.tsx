@@ -1,4 +1,4 @@
-import { HandCoins, Phone } from "lucide-react";
+import { Building, HandCoins, Phone } from "lucide-react";
 import { WalletCards } from "lucide-react";
 import { MdOutlineEmail, MdWhatsapp } from "react-icons/md";
 
@@ -14,14 +14,19 @@ const Footer = () => {
                 <span className="text-sm text-yellow-600">Cash on delivery</span>
             </span>
             <span className="font-semibold">©2024 DAILY DASH (Pty) Ltd</span>
-            <div className="w-full p-1 flex gap-1 flex-wrap overflow-hidden justify-center items-center">
-                <MdOutlineEmail color="black"/>
+            <div className="w-full p-1 flex flex-col  gap-1 flex-wrap overflow-hidden justify-center items-center">
+              <span className="flex flex-col items-center">
+              <MdOutlineEmail color="black"/>
                 <span className="mr-2">sales@dailydash.co.za</span>
                 <MdOutlineEmail color="black"/>
             <span className="mr-2">executive@dailydash.co.za</span>
+              </span>
+              <span className="flex flex-col items-center justify-center text-center"><Building color="black"/>41 Carter Road Forest Hill Johannesburg 2190</span>
+            <span className="flex items-center ">
             <Phone color="black"/>
             <MdWhatsapp color="green"/>
                <span>+27789819384</span>
+            </span>
             </div>
         <div className="flex h-14 mb-2">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 64 64">

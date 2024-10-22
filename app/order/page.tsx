@@ -6,9 +6,9 @@ import { currentUser } from "@clerk/nextjs/server";
 
 
 const Order = async () => {
-  const data = await fetchData('http://localhost:4000/v1/users/transactions');
-  const inventory = await fetchData('http://localhost:4000/v1/inventory/')
   const user = await currentUser()
+  const data = await fetchData(`http://localhost:4000/v1/users/transactions/${user?.id}`);
+  const inventory = await fetchData('http://localhost:4000/v1/inventory/')
   const address = await fetchData(`http://localhost:4000/v1/users/address/${user?.id}`);
 
     return ( 

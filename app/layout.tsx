@@ -26,12 +26,13 @@ export default function RootLayout({
 
     <html lang="en">
       <body className={inter.className}>
-      
+      <Suspense fallback={<Loading/>}>
         {children}
         <Toaster className="bg-black"/>
          
        
         <Footer/>
+        </Suspense>
         </body>
     </html>
     </ClerkProvider>

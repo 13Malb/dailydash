@@ -24,8 +24,17 @@ const Demo = ({Data, userId}:any) => {
     
     return ( 
         <section className="bg-white relative overflow-x-hidden w-full h-min-screen pt-20 overflow-y-auto  h-screen  text-black">
-        <div className="bg-white flex h-16 shadow rounded-lg z-50   items-center shadow-black w-[98%] absolute top-1 p-1">
-          
+        <div className="bg-white flex h-16 gap-1 shadow rounded-lg z-50   items-center shadow-black w-[98%] absolute top-1 p-1">
+          <div onClick={()=>(route.push('/'))} className="size-12 relative border border-red-600 bg-black rounded-full">
+            <Image
+            className="absololute object-fill"
+            src={'/DdLogo.png'}
+             fill={true}
+             priority={true}
+             alt="Logo"
+            />
+          </div>
+          <span className="text-xl text-black font-bold">Daily Dash</span>
             <MdOutlineArrowBackIos onClick={()=>(route.back())} color="white" className="absolute  border-green-800 cursor-pointer bg-black z-50 sm:size-12 size-10 right-3 hover:opacity-60 rounded-full border-2 hover:brightness-200 hover:shadow-md top-3"/>
             
         </div>
@@ -40,7 +49,7 @@ const Demo = ({Data, userId}:any) => {
           />
           </div>
           <div className="bg-black  text-white rounded w-full sm:w-[60%] m-1 p-2">
-            <div className="bg-gray-300 shadow-lg h-20 flex flex-row items-center rounded-lg p-1 w-full">
+            <div className="bg-gray-300 border border-blue-600 shadow-lg h-20 flex flex-row items-center rounded-lg p-1 w-full">
               <span className="text-sm font-semibold text-black">category</span>
               <span className="flex flex-row gap-0"><IoChevronForward className="m-0" color="black" size={20}/>
                
@@ -49,10 +58,10 @@ const Demo = ({Data, userId}:any) => {
               <span onClick={()=>(route.push(`/category/${productdata.category.toLowerCase()}`))}  className="text-xl focus:text-black hover:underline cursor-pointer hover:brightness-200 hover:text-white">{productdata.category}</span>
               
             </div>
-            <div className="bg-white flex flex-col text-2xl relative w-full p-1 rounded-lg my-3 h-40 text-black">
+            <div className="bg-white border border-red-700 flex flex-col text-2xl relative w-full p-1 rounded-lg my-3 h-40 text-black">
               <span className="bg-black w-40 hover:bg-green-600 cursor-pointer rounded-md h-10 text-white text-xl m-1 p-1">R{productdata.price}</span>
               <span className="p-1">{productdata.name}</span>
-              <span className="text-black p-1 text-xl font-bold bg-green-600 rounded-lg w-14">{productdata.qty}</span>
+              <span className="text-black p-1 text-xl font-bold bg-green-600 rounded-lg w-24 sm:w-32">{productdata.qty}</span>
               <span className="absolute rounded-xl text-black p-1 w-20 right-1 top-1 flex items-center justify-center bg-gray-300 h-16">1:Qty</span>
               <span className="absolute rounded-lg lg:opacity-80 md:right-1 md:bottom-1 flex justify-center w-52 lg:w-96 h-20 lg:h-36 truncate text-pretty overflow-hidden items-center brightness-75 bottom-2 right-2 opacity-70  lg:right-32 p-1 bg-gray-200">
                 <p className="text-black text-sm overflow-scroll truncate font-mono text-wrap">

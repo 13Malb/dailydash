@@ -9,7 +9,7 @@ import {
   SignUpButton
 } from '@clerk/nextjs'
 import { checkUser } from '@/lib/checkUser'
-import { CircleUserRound } from 'lucide-react'
+import { Carrot, CircleUserRound } from 'lucide-react'
 import { currentUser } from '@clerk/nextjs/server'
 import {
   Drawer,
@@ -23,6 +23,8 @@ import {
 } from "@/components/ui/drawer"
 import { Button } from './ui/button'
 import Image from 'next/image'
+import { GiChicken, GiCow } from 'react-icons/gi'
+import Link from 'next/link'
 
 
 
@@ -53,7 +55,7 @@ const user = await checkUser()
         alt='logo'/>
         Daily Dash (Pty) Ltd</DrawerTitle>
       <DrawerDescription>Company Policy</DrawerDescription>
-      <div className="w-full text-white p-1 overflow-scroll h-52">
+      <div className="w-full text-white p-1 overflow-scroll h-40">
         <p>
         Company Policy for DAILY DASH (PTY) Ltd:
 
@@ -68,6 +70,20 @@ Thank you for your understanding and cooperation.
 Best Regards,
 The DAILY DASH Team.
         </p>
+      </div>
+      <div className="p-1 flex gap-8 ">
+        <Link href={'/category/chicken'}>
+        <GiChicken color='white' className='size-10 border-b border-green-600 cursor-pointer hover:border-blue-600'/>
+        </Link>
+        <span className="size-10 flex items-center justify-center rounded-md">
+          <Link href={'/category/beef'}>
+          <GiCow color='white' className='size-10 border-b border-green-600 cursor-pointer hover:border-blue-600'/>
+          </Link>
+        </span>
+        <Link href={'/category/vegetable'}>
+         <Carrot color='white' className='size-10 border-b border-green-600 cursor-pointer hover:border-blue-600' />
+        </Link>
+        <span className='inline'>Click Icons</span>
       </div>
     </DrawerHeader>
     <DrawerFooter>

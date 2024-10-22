@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { Button } from '@/components/ui/button';
 import { HandCoins } from 'lucide-react';
 import { PackageOpen } from 'lucide-react';
-import { postAddress } from '@/app/clientActions';
+import { postAddress, updateTranactions } from '@/app/clientActions';
 
 const schema = z.object({
     street: z.string().min(5,{message: "Eish! Required"}),
@@ -32,7 +32,7 @@ const OrderId = ({userId,address}:any) => {
         resolver: zodResolver(schema),
       });
 
-      const onsubmit = (data:any)=>(postAddress(data,userId), route.push('/') )
+      const onsubmit = (data:any)=>(postAddress(data,userId),  updateTranactions(userId), route.push('/') )
 
     return ( 
         <section className="bg-white  relative p-1 h-auto w-full">

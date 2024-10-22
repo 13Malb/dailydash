@@ -92,7 +92,7 @@ alt="Picture of the author"
 <div className="w-full p-1  flex justify-center m-1">
 
 <Button onClick={()=>(postFun(item,userId))}   variant="secondary" className="text-black hover:bg-green-600 font-semibold">
-<HiOutlinePlus className="mr-2 h-4 w-4"/> Add Cart</Button>
+<HiOutlinePlus className="mr-2 h-4 w-4"/> Add To Cart</Button>
 </div>
 </div>
 </Card>
